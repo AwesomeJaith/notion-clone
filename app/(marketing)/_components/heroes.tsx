@@ -16,7 +16,7 @@ export const Heroes = () => {
                 </div>
                 <div className="relative h-[400px] w-[400px] hidden
                 md:block">
-                    <Image 
+                    <Image
                         src="/reading.png"
                         fill
                         className="object-contain"
