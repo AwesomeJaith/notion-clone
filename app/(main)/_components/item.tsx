@@ -59,6 +59,7 @@ export const Item = ({
     const onArchive = (
         event: React.MouseEvent<HTMLDivElement, MouseEvent>
     ) => {
+        event.stopPropagation();
         if (!id) return;
         const promise = archive({ id });
 
@@ -158,7 +159,7 @@ export const Item = ({
                             side="right"
                             forceMount
                         >
-                            <DropdownMenuItem onClick={() => {}}>
+                            <DropdownMenuItem onClick={onArchive}>
                                 <Trash className="h-4 w-4 mr-2"/>
                                 Delete
                             </DropdownMenuItem>
